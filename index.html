@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML Form</title>
+    </head>
+    <body>
+        <form id="loginForm" method="POST">
+            <div>
+                <label for="username">Username </label>
+                <input placeholder="Enter your username" type="text" id="username" name="username" minlength="5" required />
+            </div>
+            <div>
+                <label for="age">Age</label>
+                <input placeholder="Enter your Age" type="number" id="age" name="age" min="18" required />
+            </div>
+            <div>
+                <label for="password">Password </label>
+                <input placeholder="Enter your password" type="password" id="password" name="password" required />
+            </div>
+            <div>
+                <label for="feedback">Feedback</label>
+                <textarea name="" id="" cols="5" rows="4    " placeholder="Enter your message"></textarea>
+            </div>
+
+            <input type="radio" name="burger" />Option 1 <input type="radio" name="burger" />Option 2
+
+            <input type="checkbox" name="cheese" /> Cheese <input type="checkbox" name="cheese" /> Lettuce
+            <input type="checkbox" name="cheese" /> Ketchup
+
+            <input type="date" />
+
+            <select name="" id="">
+                <option selected disabled>Select meal</option>
+                <option value="">Breakfast</option>
+                <option value="">Lunch</option>
+                <option value="">Dinner</option>
+            </select>
+
+            <div>
+                <input list="browsers" name="fav" />
+                <datalist id="browsers">
+                    <option>Edge</option>
+                    <option>Opera</option>
+                    <option>Safari</option>
+                </datalist>
+            </div>
+
+            <button type="submit">Login</button>
+            <button type="button" id="clear">Clear</button>
+        </form>
+
+        <script>
+            // form.onsubmit = function (e) {
+            //     e.preventDefault();
+            // };
+
+            let form = document.getElementById("loginForm");
+            let clearForm = document.getElementById("clear");
+
+            clearForm.onclick = function () {
+                form.reset();
+            };
+        </script>
+    </body>
+</html>
